@@ -87,6 +87,7 @@ namespace chrono
     typedef OTF2XX_CHRONO_DURATION_TYPE duration;
 
     /**
+     * TODO FIXME
      * \brief convert between durations
      *
      * This ain't a simple cast, it also takes different prefixes into account.
@@ -101,11 +102,14 @@ namespace chrono
      *
      * \return duration to which is casted
      */
-    template <typename FromDuration, typename ToDuration = otf2::chrono::duration>
+    template<typename ToDuration = otf2::chrono::duration, typename FromDuration = ToDuration>
     constexpr ToDuration duration_cast(const FromDuration& dtn)
     {
         return std::chrono::duration_cast<ToDuration>(dtn);
     }
+
+
+
 } // namespace chrono
 } // namespace otf2
 
