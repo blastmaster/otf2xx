@@ -90,7 +90,8 @@ namespace writer
         {
             check(OTF2_GlobalDefWriter_WriteAttribute(wrt, data.ref(), data.name().ref(),
                                                       data.description().ref(),
-                                                      static_cast<OTF2_Type>(data.type())),
+                                                      static_cast<OTF2_Type>(data.type()),
+                                                      0), //TODO: misssing attribute flag
                   "Couldn't write attribute to global definitions writer");
         }
 

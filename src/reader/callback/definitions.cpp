@@ -61,7 +61,7 @@ namespace reader
 
                 OTF2_CallbackCode attribute(void* userData, OTF2_AttributeRef self,
                                             OTF2_StringRef name, OTF2_StringRef description,
-                                            OTF2_Type type)
+                                            OTF2_Type type, OTF2_AttributeFlag)
                 {
                     otf2::reader::reader* reader = static_cast<otf2::reader::reader*>(userData);
 
